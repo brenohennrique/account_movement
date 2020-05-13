@@ -5,11 +5,14 @@ class Conta
 
   def self.setup(file_path)
     @@all = []
-    CSV.read(file_path).each do |line|
+
+    CSV.read(file_path).map do |line|
       @@all << Conta.new(numero: line[0], saldo: line[1].to_i)
     end
+  end
 
-    puts @@all
+  def self.all
+    @@all
   end
 
   private

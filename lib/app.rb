@@ -1,3 +1,3 @@
 require './models/agencia'
 
-Agencia.new(ARGV[0], ARGV[1])
+Agencia.new(ARGV[0], ARGV[1]).saldos
