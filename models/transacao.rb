@@ -15,7 +15,7 @@ class Transacao
   end
 
   def processar(conta)
-    conta.saldo
+    conta.saldo = conta.saldo + self.valor < 0 ? conta.saldo += (self.valor - 300) : conta.saldo + self.valor
   end
 
   private
