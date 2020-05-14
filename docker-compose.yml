@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  account_movement:
+    image: ruby:2.6.3
+    volumes:
+        - .:/account_movement
+    working_dir: /account_movement
+    command: ruby lib/app.rb ./contas.csv ./transacoes.csv
